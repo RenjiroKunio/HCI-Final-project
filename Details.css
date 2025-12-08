@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     font-size: 28px;
 }
@@ -34,8 +38,48 @@ body {
 
 .topbar {
     background: #b8b8b8;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     align-self: stretch;
-    height: 52px;
+    height: 55px;
+}
+
+.next-level-adventure {
+    font-family: "Inter-ExtraBold", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.next-level-adventure:hover {
+    cursor: pointer;
+}
+
+nav {
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+}
+
+nav > a {
+    padding: 30px 25px;
+    font-size: 20px;
+}
+
+nav > a:hover {
+    background: #1c5c4c;
+    color: #ffffff;
+}
+
+.profile {
+    background: linear-gradient(to left, #d9d9d9, #d9d9d9);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
 }
 
 .content {
@@ -78,7 +122,6 @@ body {
 .details-nav > a{
     color: #000000;
     font-size: 20px;
-    text-decoration: none;
 }
 
 .details-nav > a:hover {
