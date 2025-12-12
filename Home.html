@@ -5,20 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Home.css">
+    <link rel="stylesheet" href="./dark-mode.css">
+    <script src="./dark-mode.js" defer></script>
+    <script src="./auth.js" defer></script>
     <title>Document</title>
 </head>
 
 <body>
-    <div class="topbar">
-        <a href="#">
-            <h1 class="next-level-adventure">Next Level Adventure</h1>
-        </a>
-        <nav>
-            <a href="#">Explore</a>
-            <a href="#">Create</a>
-        </nav>
-        <img class="profile" src="./images/profile.png" />
+<div class="topbar">
+    <a href="#">
+        <h1 class="next-level-adventure">Next Level Adventure</h1>
+    </a>
+
+    <nav>
+        <a href="#">Explore</a>
+        <a href="#">Create</a>
+    </nav>
+
+    <div class="topbar-right">
+        <button class="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark mode</button>
+
+        <button id="profileBtn" class="profile-btn" aria-haspopup="dialog" aria-controls="authModal" title="Sign in or sign up">
+            <img class="profile" src="./images/profile.png" alt="Profile" />
+        </button>
     </div>
+</div>
+</div>
     <section class="trip-recomendation">
         <div class="search-bar">
             <img class="search-img" src="./images/search.svg" />
@@ -418,6 +430,59 @@
             </div>
         </div>
     </section>
+    <div id="authModal" class="auth-modal" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+    <div class="auth-backdrop" data-dismiss="backdrop"></div>
+
+    <div class="auth-panel" role="document" aria-labelledby="authTitle">
+        <button class="auth-close" aria-label="Close">&times;</button>
+
+        <header class="auth-header">
+            <h2 id="authTitle">Sign in</h2>
+            <p class="auth-sub">Welcome back — enter your credentials to continue.</p>
+        </header>
+
+        <main class="auth-body">
+            <form id="loginForm" class="auth-form" autocomplete="on" novalidate>
+                <div class="field">
+                    <label for="loginEmail">Email or username</label>
+                    <input id="loginEmail" name="loginEmail" type="text" required />
+                </div>
+
+                <div class="field">
+                    <label for="loginPassword">Password</label>
+                    <input id="loginPassword" name="loginPassword" type="password" required />
+                </div>
+
+                <div class="auth-actions">
+                    <button type="submit" class="auth-primary">Sign in</button>
+                    <button type="button" class="auth-secondary" id="showSignup">Create account</button>
+                </div>
+            </form>
+
+            <form id="signupForm" class="auth-form hidden" autocomplete="on" novalidate>
+                <div class="field">
+                    <label for="signupName">Full name</label>
+                    <input id="signupName" name="signupName" type="text" required />
+                </div>
+
+                <div class="field">
+                    <label for="signupEmail">Email</label>
+                    <input id="signupEmail" name="signupEmail" type="email" required />
+                </div>
+
+                <div class="field">
+                    <label for="signupPassword">Password</label>
+                    <input id="signupPassword" name="signupPassword" type="password" required />
+                </div>
+
+                <div class="auth-actions">
+                    <button type="submit" class="auth-primary">Sign up</button>
+                    <button type="button" class="auth-secondary" id="showLogin">Back to sign in</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</div>
 </body>
 
 </html>

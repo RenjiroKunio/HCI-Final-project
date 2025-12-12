@@ -1,6 +1,8 @@
-/* === Guide profile page === */
+/* GuideProfile.css
+Cleaned + consolidated version (keeps behavior identical)
+*/
 
-/* Page container */
+/* === Page container & layout === */
 .guide-profile {
     background: #ffffff;
     padding: 24px 16px 40px 16px;
@@ -16,7 +18,7 @@
     gap: 24px;
 }
 
-/* Card pattern */
+/* Card pattern (shared) */
 .guide-header-card,
 .guide-card {
     background: #f7f7f7;
@@ -48,6 +50,7 @@
     flex: 1;
 }
 
+/* Name, badge, rating */
 .guide-name-row {
     display: flex;
     align-items: center;
@@ -67,15 +70,10 @@
     border: 1px solid #1c5c4c;
 }
 
-/* Rating pattern */
 .guide-rating-row {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 14px;
-}
-
-.guide-rating-text {
     font-size: 14px;
 }
 
@@ -106,9 +104,7 @@
     margin-top: 6px;
 }
 
-.guide-meta-item {
-    min-width: 150px;
-}
+.guide-meta-item { min-width: 150px; }
 
 .guide-meta-label {
     margin: 0 0 2px 0;
@@ -117,10 +113,7 @@
     letter-spacing: 0.04em;
 }
 
-.guide-meta-value {
-    margin: 0;
-    font-size: 14px;
-}
+.guide-meta-value { margin: 0; font-size: 14px; }
 
 /* Buttons */
 .guide-actions {
@@ -149,11 +142,12 @@
     border: 1px solid #1c5c4c;
 }
 
+/* Hover states */
 .guide-primary-btn:hover,
 .guide-secondary-btn:hover {
     cursor: pointer;
     transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* Content layout */
@@ -164,79 +158,34 @@
     flex-wrap: wrap;
 }
 
-.guide-column-main {
-    flex: 2;
-    min-width: 280px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
+.guide-column-main { flex: 2; min-width: 280px; display: flex; flex-direction: column; gap: 16px; }
+.guide-column-side { flex: 1.2; min-width: 260px; display: flex; flex-direction: column; gap: 16px; }
 
-.guide-column-side {
-    flex: 1.2;
-    min-width: 260px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-/* Sections & typography */
-.guide-section h2 {
-    margin: 0 0 8px 0;
-}
-
+/* Typography in sections */
+.guide-section h2 { margin: 0 0 8px 0; }
 .guide-section p,
-.guide-section ul {
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.guide-section ul {
-    padding-left: 18px;
-}
+.guide-section ul { margin: 0; font-size: 14px; line-height: 1.5; }
+.guide-section ul { padding-left: 18px; }
 
 /* Trails list */
-.guide-trails-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+.guide-trails-list { display: flex; flex-direction: column; gap: 10px; }
 
 .guide-trail-card {
     border-radius: 10px;
     border: 1px solid #1e1e1e;
     padding: 10px 12px;
 }
-
-.guide-trail-card-title {
-    margin: 0 0 2px 0;
-    font-size: 15px;
-}
-
-.guide-trail-meta {
-    margin: 0;
-    font-size: 12px;
-}
+.guide-trail-card-title { margin: 0 0 2px 0; font-size: 15px; }
+.guide-trail-meta { margin: 0; font-size: 12px; }
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
-    .guide-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .guide-avatar-large {
-        width: 100px;
-        height: 100px;
-    }
-
-    .guide-profile {
-        padding: 16px 12px 32px 12px;
-    }
+    .guide-header { flex-direction: column; align-items: flex-start; }
+    .guide-avatar-large { width: 100px; height: 100px; }
+    .guide-profile { padding: 16px 12px 32px 12px; }
 }
 
-
+/* === Toggle button & bottom bar (common) === */
 .theme-toggle {
     margin-left: 12px;
     padding: 6px 12px;
@@ -246,32 +195,35 @@
     background: #1c5c4c;
     color: #ffffff;
 }
+.theme-toggle:hover { cursor: pointer; opacity: 0.9; }
 
-.theme-toggle:hover {
-    cursor: pointer;
-    opacity: 0.9;
+.bottom-bar { display: none; }
+
+/* === Dark mode (grouped & consolidated) ===
+This keeps the three behaviors you requested:
+- topbar becomes black and text readable
+- bottom black bar appears
+- main page and cards darken; chips/buttons softened
+*/
+body.guide-dark {
+    background: #000000 !important;
+    color: #ffffff !important;
 }
 
-/* Bottom bar (hidden by default) */
-.bottom-bar {
-    display: none;
-}
-
-/* === Dark mode state for guide page === */
-
-/* Change only the top nav bar */
+/* topbar visuals */
 body.guide-dark .topbar {
     background: #000000;
     border-bottom-color: #000000;
 }
 
-/* Make text in the nav readable on black */
+/* ensure topbar text and links are readable */
 body.guide-dark .topbar a,
-body.guide-dark .topbar h1 {
-    color: #ffffff;
+body.guide-dark .topbar h1,
+body.guide-dark .topbar nav a {
+    color: #ffffff !important;
 }
 
-/* Show a black bar at the bottom of the viewport */
+/* bottom bar shown */
 body.guide-dark .bottom-bar {
     display: block;
     position: fixed;
@@ -282,39 +234,26 @@ body.guide-dark .bottom-bar {
     background: #000000;
 }
 
-/* Force the body background to change on dark mode */
-body.guide-dark {
-    background: #000000 !important;  /* or #111 if you want softer black */
-    color: #ffffff !important;
+/* main container & cards */
+body.guide-dark .guide-profile {
+    background: #000000 !important;
 }
-
-/* Make each content card dark too */
 body.guide-dark .guide-card,
 body.guide-dark .guide-header-card {
     background: #1a1a1a !important;
     border-color: #333 !important;
 }
 
-body.guide-dark .guide-profile {
-    background: #000000 !important;
-}
-
-/* Force the main page container to be dark */
-body.guide-dark .guide-profile {
-    background: #000000 !important;
-}
-
-/* Global text override for dark mode */
-body.guide-dark,
+/* text readability within cards */
 body.guide-dark .guide-profile,
 body.guide-dark .guide-profile-inner,
-body.guide-dark .guide-section,
 body.guide-dark .guide-card,
 body.guide-dark .guide-header-card,
-body.guide-dark * {
+body.guide-dark .guide-section {
     color: #ffffff !important;
 }
 
+/* headings and basic text */
 body.guide-dark h1,
 body.guide-dark h2,
 body.guide-dark h3,
@@ -325,15 +264,38 @@ body.guide-dark a {
     color: #ffffff !important;
 }
 
-/* Dark mode tags fix */
+/* tags (chips) - softer in dark */
 body.guide-dark .guide-tag {
     background: #2a2a2a !important;
     color: #cccccc !important;
+    border: 1px solid rgba(255,255,255,0.03) !important;
 }
 
-/* Dark mode – soften the secondary button */
+/* secondary (outlined) button - softened for dark */
 body.guide-dark .guide-secondary-btn {
-    background: #1b1b1b !important;     /* soft dark background */
-    border-color: #2f2f2f !important;   /* subtle grey border */
-    color: #e0e0e0 !important;          /* dimmed white text */
+    background: #1b1b1b !important;
+    border-color: #2f2f2f !important;
+    color: #e0e0e0 !important;
 }
+
+/* keep theme-toggle visible */
+body.guide-dark .theme-toggle {
+    background: #1c5c4c !important;
+    color: #fff !important;
+}
+
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+}
+
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;   
+}
+
+

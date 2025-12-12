@@ -37,6 +37,23 @@ h2 {
     height: 55px;
 }
 
+.profile-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.profile-btn:focus {
+    outline: none;
+}
+
+.profile-btn .profile {
+    display: block;
+}
+
 .next-level-adventure {
     font-family: "Inter-ExtraBold", sans-serif;
     font-size: 20px;
@@ -173,4 +190,162 @@ nav > a:hover {
     padding: 0px 20px;
     display: flex;
     gap: 10px;
+}
+
+.theme-toggle {
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: none;
+    font-size: 14px;
+    background: #1c5c4c;
+    color: white;
+    margin-right: 12px;
+}
+.theme-toggle:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+/* Right-side container so profile stays on far right */
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Home dark mode colors */
+body.home-dark {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* Topbar in home dark mode */
+body.home-dark .topbar {
+    background: #000000;
+    border-bottom: 1px solid #000;
+}
+
+body.home-dark .topbar a,
+body.home-dark .topbar h1,
+body.home-dark .topbar nav a {
+    color: #ffffff;
+}
+
+/* Cards in dark mode */
+body.home-dark .trip-card {
+    background: #1a1a1a;
+    border-color: #333;
+}
+
+body.home-dark .search-bar {
+    background: #2a2a2a;
+}
+
+body.home-dark .search {
+    color: #fff;
+}
+
+/* ===== Auth modal styles ===== */
+
+.auth-modal {
+display: none;
+position: fixed;
+inset: 0;
+z-index: 10050;
+align-items: center;
+justify-content: center;
+font-family: inherit;
+}
+
+.auth-modal .auth-backdrop {
+position: fixed;
+inset: 0;
+background: rgba(0,0,0,0.48);
+backdrop-filter: blur(2px);
+}
+
+.auth-modal .auth-panel {
+position: relative;
+width: 92%;
+max-width: 420px;
+margin: 0 16px;
+border-radius: 12px;
+padding: 18px;
+box-sizing: border-box;
+background: #ffffff;
+box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+html.dark-mode .auth-modal .auth-panel,
+body.home-dark .auth-modal .auth-panel {
+background: #121212;
+color: #fff;
+border: 1px solid rgba(255,255,255,0.04);
+}
+
+.auth-close {
+position: absolute;
+right: 10px;
+top: 8px;
+background: transparent;
+border: none;
+font-size: 20px;
+color: inherit;
+padding: 6px;
+}
+
+.auth-header { margin-bottom: 8px; }
+.auth-header h2 { margin: 0 0 4px 0; font-size: 20px; }
+.auth-sub { margin: 0; font-size: 13px; color: #555; }
+html.dark-mode .auth-sub,
+body.home-dark .auth-sub { color: #cfcfcf; }
+
+.auth-form { display: flex; flex-direction: column; gap: 12px; }
+.auth-form .field { display: flex; flex-direction: column; gap: 6px; }
+.auth-form label {
+font-size: 13px;
+font-weight: 600;
+color: #222;
+}
+html.dark-mode .auth-form label,
+body.home-dark .auth-form label { color: #ddd; }
+
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"] {
+padding: 10px 12px;
+border-radius: 8px;
+border: 1px solid #ddd;
+background: #fff;
+color: #111;
+}
+
+html.dark-mode .auth-form input,
+body.home-dark .auth-form input {
+background: #1b1b1b;
+border: 1px solid #333;
+color: #fff;
+}
+
+.auth-actions { display:flex; gap:10px; margin-top: 6px; }
+.auth-primary {
+background: #1c5c4c;
+color: #fff;
+border: none;
+padding: 10px 14px;
+border-radius: 8px;
+font-weight: 700;
+}
+.auth-secondary {
+background: transparent;
+border: 1px solid #1c5c4c;
+color: #1c5c4c;
+padding: 10px 14px;
+border-radius: 8px;
+}
+
+.hidden { display: none !important; }
+
+@media (max-width: 480px) {
+.auth-modal .auth-panel { padding: 14px; max-width: 94%; }
 }

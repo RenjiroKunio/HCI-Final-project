@@ -1,0 +1,169 @@
+/* dark-mode.css
+Global dark-mode styles. Use only necessary overrides so the site otherwise looks identical.
+*/
+
+/* The dark-mode flag applied to <html> */
+html.dark-mode,
+html.dark-mode body {
+background: #000000;
+color: #ffffff;
+}
+
+/* Topbar: make readable on dark background */
+html.dark-mode .topbar {
+background: #1b1b1b;        /* neutral, modern grey */
+border-bottom: 1px solid #2a2a2a;
+}
+
+/* Ensure topbar children readable */
+html.dark-mode .topbar a,
+html.dark-mode .topbar h1,
+html.dark-mode .topbar nav a {
+color: #ffffff !important;
+}
+
+/* Make sure profile icon still visible (remove any darkening filter) */
+html.dark-mode .topbar .profile {
+filter: none !important;
+opacity: 1 !important;
+border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Bottom bar (Guide page shows this by presence of .bottom-bar element) */
+html.dark-mode .bottom-bar {
+display: block;
+position: fixed;
+left: 0;
+right: 0;
+bottom: 0;
+height: 28px;
+background: #000000;
+z-index: 9998;
+}
+
+/* Cards: soft dark background so content reads well */
+html.dark-mode .guide-card,
+html.dark-mode .guide-header-card,
+html.dark-mode .trip-card {
+background: #1a1a1a !important;
+border-color: #333 !important;
+color: #ffffff !important;
+}
+
+/* Search bar on Home */
+html.dark-mode .search-bar {
+background: #2a2a2a !important;
+}
+
+/* Inputs */
+html.dark-mode .search {
+color: #ffffff;
+}
+
+/* Tags (chips) */
+html.dark-mode .guide-tag {
+background: #2a2a2a !important;
+color: #cccccc !important;
+border: 1px solid rgba(255,255,255,0.03) !important;
+}
+
+/* Secondary outlined buttons */
+html.dark-mode .guide-secondary-btn {
+background: #1b1b1b !important;
+border-color: #2f2f2f !important;
+color: #e0e0e0 !important;
+}
+
+/* Theme toggle button style (keeps same look on both pages) */
+.theme-toggle {
+padding: 6px 12px;
+border-radius: 999px;
+border: none;
+font-size: 14px;
+background: #1c5c4c;
+color: #ffffff;
+}
+.theme-toggle:hover { opacity: 0.92; cursor: pointer; }
+
+/* When page uses its own bottom-bar hidden by default, override to hide it in light mode */
+.bottom-bar { display: none; }
+
+/* Ensure strong text contrast in dark mode */
+html.dark-mode h1,
+html.dark-mode h2,
+html.dark-mode h3,
+html.dark-mode p,
+html.dark-mode li,
+html.dark-mode span,
+html.dark-mode a {
+color: #ffffff !important;
+}
+
+/* ===== Fix: make the entire page background and text switch in dark mode ===== */
+
+/* Ensure the <html> + body background is dark (override any existing body rule) */
+html.dark-mode,
+html.dark-mode body {
+background: #000000 !important;
+color: #ffffff !important;
+}
+
+/* Some page containers need explicit dark backgrounds */
+html.dark-mode .trip-recomendation,
+html.dark-mode .guide-profile,
+html.dark-mode .guide-profile-inner,
+html.dark-mode .home-section,
+html.dark-mode .home-container {
+background: transparent; /* allow body black to show through */
+color: #ffffff !important;
+}
+
+/* If specific containers used white card backgrounds, darken them */
+html.dark-mode .guide-card,
+html.dark-mode .guide-header-card,
+html.dark-mode .trip-card {
+background: #1a1a1a !important;
+border-color: #333 !important;
+color: #ffffff !important;
+}
+
+/* Search bar and inputs */
+html.dark-mode .search-bar {
+background: #2a2a2a !important;
+}
+html.dark-mode .search {
+color: #ffffff !important;
+}
+
+/* Make most text elements readable (broad but necessary because Home.css uses very global rules) */
+html.dark-mode h1,
+html.dark-mode h2,
+html.dark-mode h3,
+html.dark-mode p,
+html.dark-mode li,
+html.dark-mode span,
+html.dark-mode a,
+html.dark-mode label,
+html.dark-mode button,
+html.dark-mode input,
+html.dark-mode textarea {
+color: #ffffff !important;
+}
+
+/* Target everything as a last-resort override so no text remains black */
+html.dark-mode * {
+color: #ffffff !important;
+}
+
+/* Keep icons/images slightly brightened if needed (optional) */
+html.dark-mode img,
+html.dark-mode svg {
+filter: none !important;
+}
+
+/* Bottom bar (still shown when present) */
+html.dark-mode .bottom-bar {
+display: block !important;
+background: #000000;
+}
+
