@@ -37,13 +37,14 @@ h2 {
     height: 55px;
 }
 
-.next-level-adventure {
+.next-level-adventure>h1 {
     font-family: "Inter-ExtraBold", sans-serif;
     font-size: 20px;
     font-weight: 800;
 }
 
 .next-level-adventure:hover {
+    background: #7d7d7d;
     cursor: pointer;
 }
 
@@ -55,12 +56,12 @@ nav {
     align-self: stretch;
 }
 
-nav > a {
+nav>a {
     padding: 30px 25px;
     font-size: 20px;
 }
 
-nav > a:hover {
+nav>a:hover {
     background: #1c5c4c;
     color: #ffffff;
 }
@@ -118,11 +119,12 @@ nav > a:hover {
     align-self: stretch;
 }
 
-.home-container {
+.trip-container {
     display: flex;
     gap: 10px;
     align-items: center;
     overflow-x: scroll;
+    scroll-behavior: smooth;
 }
 
 .trip-card {
@@ -155,7 +157,7 @@ nav > a:hover {
     flex: 1;
 }
 
-.home-trip-top > h2 {
+.home-trip-top>h2 {
     margin: 0;
 }
 
@@ -173,4 +175,33 @@ nav > a:hover {
     padding: 0px 20px;
     display: flex;
     gap: 10px;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LR-button {
+    background: #d9d9d9;
+    border-radius: 50%;
+    padding: 9px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LR-button:hover {
+    background: #6a6a6a;
+    border-radius: 50%;
+    padding: 9px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    width: 24px;
+    height: 24px;
 }
