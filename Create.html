@@ -12,14 +12,32 @@
 <body>
   <div class="topbar">
     <a class="next-level-adventure" href="./Home.html">
-      <h1>Next Level Adventure</h1>
+        <h1>Next Level Adventure</h1>
     </a>
+
     <nav>
-      <a href="./Search.html">Explore</a>
-      <a href="./Create.html">Create</a>
+        <a href="./Search.html">Explore</a>
+        <a href="./Create.html">Create</a>
     </nav>
-    <img class="profile" src="./images/profile.png" />
-  </div>
+
+    <div class="topbar-right">
+        <!-- Light / Dark mode toggle FIRST -->
+        <button class="theme-toggle"
+                aria-pressed="false"
+                aria-label="Toggle dark mode">
+            Light mode
+        </button>
+
+        <!-- Profile button SECOND -->
+        <button id="profileBtn"
+                class="profile-btn"
+                aria-haspopup="dialog"
+                aria-controls="authModal"
+                title="Sign in or sign up">
+            <img class="profile" src="./images/profile.png" alt="Profile" />
+        </button>
+    </div>
+</div>
   <section class="create-form">
     <h1>Create a new trip</h1>
     <form id="trip-form">
