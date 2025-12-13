@@ -1,26 +1,3 @@
-.trip-creation-low-fi,
-.trip-creation-low-fi * {
-  box-sizing: border-box;
-}
-.trip-creation-low-fi {
-  background: #ffffff;
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  align-items: center;
-  justify-content: flex-start;
-  height: 675px;
-  position: relative;
-  overflow: hidden;
-}
-.topbar {
-  background: #b8b8b8;
-  align-self: stretch;
-  flex-shrink: 0;
-  height: 52px;
-  position: relative;
-  overflow: hidden;
-}
 .body {
   background: #ffffff;
   padding: 16px 100px 16px 100px;
