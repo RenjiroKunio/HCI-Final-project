@@ -5,46 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Home.css">
-<link rel="stylesheet" href="./dark-mode.css">
+    <link rel="stylesheet" href="./dark-mode.css">
     <script src="./dark-mode.js" defer></script>
     <script src="./auth.js" defer></script>
     <title>Next Level Adventure</title>
 </head>
 
 <body>
-<div class="topbar">
-    <a class="next-level-adventure" href="./Home.html">
-        <h1>Next Level Adventure</h1>
-    </a>
+    <div class="topbar">
+        <a class="next-level-adventure" href="./Home.html">
+            <h1>Next Level Adventure</h1>
+        </a>
 
-    <nav>
-        <a href="./Search.html">Explore</a>
-        <a href="./Create.html">Create</a>
-    </nav>
+        <nav>
+            <a href="./Search.html">Explore</a>
+            <a href="./Create.html">Create</a>
+        </nav>
 
-    <div class="topbar-right">
-        <!-- Light / Dark mode toggle FIRST -->
-        <button class="theme-toggle"
-                aria-pressed="false"
-                aria-label="Toggle dark mode">
-            Light mode
-        </button>
+        <div class="topbar-right">
+            <!-- Light / Dark mode toggle FIRST -->
+            <button class="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">
+                Light mode
+            </button>
 
-        <!-- Profile button SECOND -->
-        <button id="profileBtn"
-                class="profile-btn"
-                aria-haspopup="dialog"
-                aria-controls="authModal"
+            <!-- Profile button SECOND -->
+            <button id="profileBtn" class="profile-btn" aria-haspopup="dialog" aria-controls="authModal"
                 title="Sign in or sign up">
-            <img class="profile" src="./images/profile.png" alt="Profile" />
-        </button>
+                <img class="profile" src="./images/profile.png" alt="Profile" />
+            </button>
+        </div>
     </div>
-</div>
-</div>
+    </div>
     <section class="trip-recomendation">
         <div class="search-bar">
             <img class="search-img" src="./images/search.svg" />
-            <input class="search" type="text" placeholder="Search for a trip"/>
+            <input class="search" type="text" placeholder="Search for a trip" />
         </div>
         <div class="home-section">
             <h1>Upcoming trips</h1>
@@ -464,7 +459,7 @@
             </div>
         </div>
     </section>
-<div id="authModal" class="auth-modal" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+    <div id="authModal" class="auth-modal" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
         <div class="auth-backdrop" data-dismiss="backdrop"></div>
 
         <div class="auth-panel" role="document" aria-labelledby="authTitle">

@@ -2,6 +2,7 @@ form {
   display: flex;
   flex-direction: column;
 }
+
 .create-form {
   background: #ffffff;
   padding: 16px 100px;
@@ -10,11 +11,13 @@ form {
   align-self: stretch;
   flex: 1;
 }
+
 .form-section {
   display: flex;
   gap: 20px;
   align-self: stretch;
 }
+
 .form-input {
   padding: 20px 18px 20px 18px;
   display: flex;
@@ -22,7 +25,8 @@ form {
   gap: 10px;
   flex: 1;
 }
-.input-container{
+
+.input-container {
   display: flex;
   flex-direction: row;
   flex: 1;
@@ -30,14 +34,18 @@ form {
   background: #d9d9d9;
   padding: 5px 0;
 }
-.container-selected, .input-container:hover{
+
+.container-selected,
+.input-container:hover {
   background: #b8b8b8;
 }
+
 .input-icon {
   width: 20px;
   height: 20px;
   margin: 0 10px;
 }
+
 .input-field {
   background: transparent;
   padding: 5px 10px;
@@ -47,35 +55,40 @@ form {
   border: none;
   flex: 1;
 }
+
 #textarea-container {
   align-items: flex-start;
 }
-#textarea-container > .input-icon {
+
+#textarea-container>.input-icon {
   margin-top: 5px;
 }
+
 textarea.input-field {
   align-self: stretch;
 }
+
 .vertical-container {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
+
 .submit-button {
-    background: #1c5c4c;
-    border-radius: 5px;
-    border: 0;
-    padding: 15px 30px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    align-self: flex-end;
-    color: #fff;
-    font-size: 16px;
+  background: #1c5c4c;
+  border-radius: 5px;
+  border: 0;
+  padding: 15px 30px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  color: #fff;
+  font-size: 16px;
 }
 
 .submit-button:hover {
-    cursor: pointer;
-    background: #10352c;
+  cursor: pointer;
+  background: #10352c;
 }

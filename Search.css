@@ -17,7 +17,7 @@
   justify-content: center;
   align-self: stretch;
   position: sticky;
-  top:0;
+  top: 0;
 }
 
 .filters {
@@ -38,11 +38,11 @@
   padding: 0 5px 0 10px;
 }
 
-.filter:hover{
+.filter:hover {
   background-color: #B8B8B8;
 }
 
-select.filter > option:disabled {
+select.filter>option:disabled {
   color: #858585;
 }
 
@@ -97,29 +97,29 @@ select.filter > option:disabled {
   display: flex;
   flex-direction: column;
   gap: 19px;
-  
-  
+
+
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
 }
 
 .book-button {
-    background: #1c5c4c;
-    border-radius: 5px;
-    border: 0;
-    padding: 0 12px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 35px;
-    color: #fff;
-    font-size: 16px;
+  background: #1c5c4c;
+  border-radius: 5px;
+  border: 0;
+  padding: 0 12px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 35px;
+  color: #fff;
+  font-size: 16px;
 }
 
 .book-button:hover {
-    cursor: pointer;
-    background: #10352c;
+  cursor: pointer;
+  background: #10352c;
 }
